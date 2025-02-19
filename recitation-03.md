@@ -47,7 +47,10 @@ The implementation of `_quadratic_multiply` will do the following:
 3. Base case: If both $x$ and $y$ are $\le 1$, then just return their product.
 4. Otherwise, split `xvec` and `yvec` into two halves each. Call them `x_left` `x_right` `y_left` `y_right`.
 5. Now you can apply the formula above directly. Anywhere there is a multiply, call `_quadratic_multiply`
-6. Use `bit_shift` to do the $2^n$ and $2^{n/2}$ multiplications.
-7. Finally, you have to do three sums to get the final answer. For this assignment, you can just use the `decimal_val`s of each number to do this, though keep in mind that binary addition is a $O(n)$ operation, assuming $n$ bits per term.
-8. Please implement function test_quadratic_multiply in `main.py` to obtain the running time.
-9. Please input more test cases in `test_main.py`
+   /// WHEN YOU split the bianary number in half the left half loses all the digits beofre it, so you need to bit shift it len(xRight) digits down to get the accurate number
+7. Use `bit_shift` to do the $2^n$ and $2^{n/2}$ multiplications. //shift the num for 2 n times tot he left to get n times 2
+8. Finally, you have to do three sums to get the final answer. For this assignment, you can just use the `decimal_val`s of each number to do this, though keep in mind that binary addition is a $O(n)$ operation, assuming $n$ bits per term.
+9. Please implement function test_quadratic_multiply in `main.py` to obtain the running time.
+10. Please input more test cases in `test_main.py`
+
+//instance: if isinstance(x,BinaryNumber) returns ture or false
